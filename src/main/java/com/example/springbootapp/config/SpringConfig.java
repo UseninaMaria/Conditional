@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class SpringConfig {
 
     @Bean
-    @ConditionalOnProperty(name = "netology.profile.dev", havingValue = "true")
+    @ConditionalOnProperty(name = "netology.profile.dev", havingValue = "true", matchIfMissing = true)
     public SystemProfile devProfile() {
         return new DevProfile();
     }
